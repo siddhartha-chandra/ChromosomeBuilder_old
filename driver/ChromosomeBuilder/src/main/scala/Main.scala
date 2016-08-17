@@ -17,6 +17,14 @@ object Main{
     val lines = Source.fromFile(filename).getLines()
     val DNASequences = Utils.getDNASequences(lines)
     val constructedChromosome = constructChromosome(DNASequences)
-    println(constructedChromosome)
+
+    println(
+      s"""Fragments:
+      ${constructedChromosome.fragmentName}
+
+      Sequence:
+      ${constructedChromosome.sequence}
+      """)
+
   }
 }
